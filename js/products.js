@@ -8,7 +8,6 @@ fetch(productsAutos)
     for (i=0 ; i<data.products.length; i++){
         autos_Prod.innerHTML +=
         `<div class= "container-autos">
-            <div class= "prod-name">${data.products[i].name}</div>
             <div class= "products-name">${data.products[i].name}</div>
             <div class= "products-cost">${data.products[i].cost}</div>
             <div class= "products-currency">${data.products[i].currency}</div>
