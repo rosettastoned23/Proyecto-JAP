@@ -4,7 +4,7 @@ function login(){
 
 
     if (email.value != "" && contra.value != ""){
-        window.location.href = "https://rosettastoned23.github.io/Proyecto-JAP/";
+        window.location.href = "principal.html";
     } 
     else {
         email.classList.add("rojo");
