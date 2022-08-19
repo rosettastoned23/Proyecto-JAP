@@ -1,0 +1,24 @@
+function login(){
+    let email= document.getElementById('email');
+    let contra= document.getElementById('contra');
+
+
+    if (email.value != "" && contra.value != ""){
+        window.location.href = "https://rosettastoned23.github.io/Proyecto-JAP/";
+    } 
+    else {
+        email.classList.add("rojo");
+        contra.classList.add("rojo");
+    }
+    }
+    console.log(login)
+
+document.addEventListener('DOMContentLoaded', () =>{
+    document.getElementById('form').addEventListener('submit', (e)=>{
+        e.preventDefault()
+        login();
+})
+})
+
+
+
