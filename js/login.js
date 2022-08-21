@@ -20,5 +20,9 @@ document.addEventListener('DOMContentLoaded', () =>{
 })
 })
 
+function Credencial(){
+        window.location.href = "principal.html";
+    } 
+
 
 
