@@ -21,9 +21,9 @@ document.addEventListener('DOMContentLoaded', () =>{
 })
 
 function Credencial(){
-        window.location.href = "principal.html";
-    } 
-   // console.log(window.location)
+    window.location.href = "principal.html";
+} 
+// console.log(window.location)
 
 
 
