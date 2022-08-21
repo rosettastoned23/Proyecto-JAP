@@ -5,7 +5,7 @@ const productsAutos = "https://japceibal.github.io/emercado-api/cats_products/10
 fetch(productsAutos)
     .then(response => response.json())
     .then(data => {
-        console.log(data)
+        //console.log(data)
         let autosProd = document.getElementById("products");
         
     for (let i=0 ; i < data.products.length; i++){

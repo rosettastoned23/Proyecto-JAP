@@ -11,7 +11,7 @@ function login(){
         contra.classList.add("rojo");
     }
     }
-    console.log(login)
+    //console.log(login)
 
 document.addEventListener('DOMContentLoaded', () =>{
     document.getElementById('form').addEventListener('submit', (e)=>{
@@ -23,6 +23,7 @@ document.addEventListener('DOMContentLoaded', () =>{
 function Credencial(){
         window.location.href = "principal.html";
     } 
+   // console.log(window.location)
 
 
 
