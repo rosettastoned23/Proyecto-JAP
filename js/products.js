@@ -1,12 +1,15 @@
 document.addEventListener('DOMContentLoaded', function(){
+let idCategorias = localStorage.getItem('catID')
+console.log(idCategorias)
+let productsAutos = `https://japceibal.github.io/emercado-api/cats_products/${idCategorias}.json`
 
-const productsAutos = "https://japceibal.github.io/emercado-api/cats_products/101.json"
 
 fetch(productsAutos)
     .then(response => response.json())
     .then(data => {
         //console.log(data)
         let autosProd = document.getElementById("products");
+        
         
     for (let i=0 ; i < data.products.length; i++){
         //console.log(data.products[3].name)

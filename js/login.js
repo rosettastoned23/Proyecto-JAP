@@ -1,9 +1,11 @@
 function login(){
+
     let email= document.getElementById('email');
     let contra= document.getElementById('contra');
 
 
     if (email.value != "" && contra.value != ""){
+        localStorage.setItem('email', (email.value));
         window.location.href = "principal.html";
     } 
     else {
