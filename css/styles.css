@@ -245,3 +245,6 @@ p.mb-1{
   color: #fff;
   display: flex;
 }
+input.form-controlrounded{
+display: block;
+}
