@@ -18,9 +18,9 @@ fetch(productsAutos)
         showProducts()
     });
 
-    function showProducts(){
+function showProducts(){
 
-        let htmlContentToAppend = "";
+    let htmlContentToAppend = "";
         ordenarProductos()
         for (let i=0 ; i < productArray.length; i++){
             products = productArray[i];
@@ -45,17 +45,24 @@ fetch(productsAutos)
                     </div>
                 </div>
             </div>`
-            }
-            document.getElementById("cat-list-container").innerHTML = htmlContentToAppend;
-    }
+        }
+                
+            
+    document.getElementById("cat-list-container").innerHTML = htmlContentToAppend;
+}
 
 
 filtrar.addEventListener('click', () =>{
-   productArray =  arrayOriginal.filter(producto => ((producto.cost >= inputminimo.value) && (producto.cost <= inputmaximo.value)) )
+   
+    productArray =  arrayOriginal.filter(producto => ((producto.cost >= inputminimo.value) && (producto.cost <= inputmaximo.value)) )
    console.log(productArray)
+   
    showProducts()
 });
+
+
 function ordenarProductos(){
+        
     if (criterio == 0) return;
     if (criterio == 1) {
         productArray.sort(function(a, b){
@@ -90,11 +97,12 @@ function ordenarProductos(){
             return 0;
         
         });
-}};
+    }
+};
+
     document.getElementById('sortAsc').addEventListener('click', () =>{criterio=1
         showProducts()});
     document.getElementById('sortDesc').addEventListener('click', () =>{criterio=2
         showProducts()});
     document.getElementById('sortByCount').addEventListener('click', () =>{criterio=3
-        showProducts();    console.log(criterio)
-});
+        showProducts();});
