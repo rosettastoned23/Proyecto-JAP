@@ -1,5 +1,4 @@
 let idCategorias = localStorage.getItem('catID')
-console.log(idCategorias)
 let productsAutos = `https://japceibal.github.io/emercado-api/cats_products/${idCategorias}.json`
 let productArray = [];
 let filtrar = document.getElementById('rangeFilterCount');
@@ -54,9 +53,9 @@ function showProducts(){
 
 filtrar.addEventListener('click', () =>{
    
-    productArray =  arrayOriginal.filter(producto => ((producto.cost >= inputminimo.value) && (producto.cost <= inputmaximo.value)) )
+    productArray =  arrayOriginal.filter(producto => 
+        ((producto.cost >= inputminimo.value) && (producto.cost <= inputmaximo.value)) )
    console.log(productArray)
-   
    showProducts()
 });
 
@@ -106,3 +105,9 @@ function ordenarProductos(){
         showProducts()});
     document.getElementById('sortByCount').addEventListener('click', () =>{criterio=3
         showProducts();});
+
+    document.getElementById("clearRangeFilter").addEventListener("click", function(){
+            document.getElementById("rangeFilterCountMin").value = "";
+            document.getElementById("rangeFilterCountMax").value = "";
+            showProducts();
+    });
