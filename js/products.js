@@ -55,7 +55,7 @@ filtrar.addEventListener('click', () =>{
    
     productArray =  arrayOriginal.filter(producto => 
         ((producto.cost >= inputminimo.value) && (producto.cost <= inputmaximo.value)) )
-   console.log(productArray)
+   //console.log(productArray)
    showProducts()
 });
 
@@ -105,6 +105,8 @@ function ordenarProductos(){
         showProducts()});
     document.getElementById('sortByCount').addEventListener('click', () =>{criterio=3
         showProducts();});
+
+        
 
     document.getElementById("clearRangeFilter").addEventListener("click", function(){
             document.getElementById("rangeFilterCountMin").value = "";
