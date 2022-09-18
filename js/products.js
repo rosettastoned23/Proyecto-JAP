@@ -12,10 +12,15 @@ let criterio = 0;
 fetch(productsAutos)
     .then(response => response.json())
     .then(data => {
+        console.log(data)
         arrayOriginal = data.products;
         productArray = data.products;
         showProducts()
     });
+    function setProdID(id) {
+        localStorage.setItem("prodID", id);
+        window.location.href = "product-info.html"
+    }
 
 function showProducts(){
 
@@ -23,13 +28,12 @@ function showProducts(){
         ordenarProductos()
         for (let i=0 ; i < productArray.length; i++){
             products = productArray[i];
-            
             htmlContentToAppend +=
-            `<div class="container-autos">
-                <div onclick="setCatID(${products.id})" class="list-group-item list-group-item-action cursor-active">
+            `<div class="container-autos" id="container-id">
+                <div onclick="setProdID(${products.id})" class="list-group-item list-group-item-action cursor-active">
                     <div class="row">
                         <div class="col-3">
-                            <img src= "${products.image}" alt="${products.description}" class="img-thumbnail"">
+                            <img src= "${products.image}" alt="${products.description}" class="img-thumbnail">
                         </div>
                         <div class="col">
                             <div class="d-flex w-100 justify-content-between">
@@ -44,6 +48,7 @@ function showProducts(){
                     </div>
                 </div>
             </div>`
+            
         }
                 
             
@@ -113,3 +118,6 @@ function ordenarProductos(){
             document.getElementById("rangeFilterCountMax").value = "";
             showProducts();
     });
+
+   
+        
