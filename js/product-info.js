@@ -12,6 +12,7 @@ fetch(productsInfo)
         <div class="container-info" id="container-info">
             <div class="container2">
                 <br><h3>${data.name}</h3>
+                <hr>
                 <div class="container3">
                     <h4>Costo</h4>
                     <p> ${data.cost} - ${data.currency}</p>
@@ -20,18 +21,19 @@ fetch(productsInfo)
                     <h4>Categoría</h4>
                     <p>${data.category}</p>
                     <h4>Cantidad de productos vendidos</h4>
-                    <p>${data.soldCount}</p>
+                    <p>${data.soldCount}</p><hr>
                 </div>
             </div>
-            <br>
             <div class="container1">
                 <div class="row">
-                    <img class="col-3" src= "${data.images[0]}" >
-                    <img class="col-3" src= "${data.images[1]}">
-                    <img class="col-3" src= "${data.images[2]}">
-                    <img class="col-3" src= "${data.images[3]}">
+                <h4><b>Imágenes del producto:</b><h3>
+                    <img class="col-2" src= "${data.images[0]}" >
+                    <img class="col-2" src= "${data.images[1]}">
+                    <img class="col-2" src= "${data.images[2]}">
+                    <img class="col-2" src= "${data.images[3]}">
+                    <br><br><hr>
+                    <h4><b>Comentarios:</b></h4>
                     <br>
-                    <h4>Comentarios</h4>
                 </div> 
             </div>
         </div>`
@@ -54,13 +56,13 @@ fetch(productsInfo)
                 `<div class="comentsContainer" >
                     <div class="comentarios">
                     <br>
-                    <p>${coments.user} - ${coments.dateTime} </p>
+                    <p>-${coments.user} - ${coments.dateTime} </p>
                     <p>${coments.score}
                     <span class="fa fa-star ${coments.score >= 1 ? "checked" : "no-checked"}"></span>
                     <span class="fa fa-star ${coments.score >= 2 ? "checked" : "no-checked"}"></span>
                     <span class="fa fa-star ${coments.score >= 3 ? "checked" : "no-checked"}"></span>
                     <span class="fa fa-star ${coments.score >= 4 ? "checked" : "no-checked"}"></span>
-                    <span class="fa fa-star ${coments.score >= 5 ? "checked" : "no-checked"}"></span>
+                    <span class="fa fa-star ${coments.score >= 5 ? "checked" : "no-checked"}"></span></p>
                     <br>
                     <p>${coments.product} - ${coments.description}</p>
                     </div>
@@ -87,13 +89,13 @@ document.addEventListener('DOMContentLoaded', () =>{
             `<div class="comentsContainer" >
                 <div class="comentarios">
                 <br>
-                <p>${usuario} - ${fecha} </p>
+                <p>-${usuario} - ${fecha} </p>
                 <p>${puntaje}
                 <span class="fa fa-star ${puntaje >= 1 ? "checked" : "no-checked"}"></span>
                 <span class="fa fa-star ${puntaje >= 2 ? "checked" : "no-checked"}"></span>
                 <span class="fa fa-star ${puntaje >= 3 ? "checked" : "no-checked"}"></span>
                 <span class="fa fa-star ${puntaje >= 4 ? "checked" : "no-checked"}"></span>
-                <span class="fa fa-star ${puntaje >= 5 ? "checked" : "no-checked"}"></span>
+                <span class="fa fa-star ${puntaje >= 5 ? "checked" : "no-checked"}"></span></p>
                 <p>${comentario}</p>
                 </div>
             </div>`
